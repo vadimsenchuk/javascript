@@ -11,12 +11,12 @@ let money = prompt('Ваш бюджет на месяц?', ''),
     optinalExpenses: {}
   };
 
-appData.expenses[
-  prompt('Введите обязательную статью расходов в этом месяце', '')
-] = prompt('Во сколько обойдется?', '');
-appData.expenses[
-  prompt('Введите обязательную статью расходов в этом месяце', '')
-] = prompt('Во сколько обойдется?', '');
+for (let i = 0; i < 2; i++) {
+  let a = prompt('Введите обязательную статью расходов в этом месяце', '');
+  let b = prompt('Во сколько обойдется?', '');
+
+  appData.expenses[a] = b;
+}
 
 console.log(appData);
 
